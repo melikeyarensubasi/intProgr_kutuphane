@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Melike Kütüphanesi - Personel</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f5f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #003B5C;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #005b88;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+    }
+
+    nav ul li:hover {
+      background-color: #004a70;
+    }
+
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #0077aa;
+      top: 50px;
+      left: 0;
+      min-width: 180px;
+      z-index: 1;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul li {
+      width: 100%;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #003B5C;
+    }
+
+    ul.staff-list {
+      list-style-type: '👤 ';
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: #003B5C;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li ul {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Melike Kütüphanesi</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Başkanlık</a>
+        <ul>
+          <li><a href="#">Misyon</a></li>
+          <li><a href="#">Vizyon</a></li>
+          <li><a href="#">Organizasyon</a></li>
+        </ul>
+      </li>
+      <li><a href="#">İdari</a>
+        <ul>
+          <li><a href="#">Personel</a></li>
+          <li><a href="#">Birimler</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Hizmetler</a></li>
+      <li><a href="#">Veritabanları</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Personelimiz</h2>
+    <p>
+      <strong>Melike Üniversitesi Kütüphane ve Dokümantasyon Dairesi Başkanlığı</strong> personeli; bilgiye erişim, kaynak yönetimi ve kullanıcı memnuniyetine odaklanan profesyonel bir kadrodan oluşmaktadır.
+    </p>
+    <p>
+      Kütüphane hizmetlerinin etkin, verimli ve çağdaş standartlarda yürütülmesini sağlayan personelimiz; akademik dünyanın ihtiyaçlarına hızlı yanıt veren, kullanıcı odaklı, yenilikçi ve çözüm üreten bir anlayışla görev yapmaktadır.
+    </p>
+
+    <h3>Görevli Personel Kategorileri</h3>
+    <ul class="staff-list">
+      <li><strong>Bilgi ve Belge Yönetimi Uzmanları:</strong> Kataloglama, sınıflama, veri yönetimi ve koleksiyon geliştirme süreçlerinde görev alırlar.</li>
+      <li><strong>Elektronik Kaynak Sorumluları:</strong> Dijital kaynakların erişimi, kullanımı ve teknik desteğini sağlarlar.</li>
+      <li><strong>Kullanıcı Hizmetleri Danışmanları:</strong> Okuyuculara rehberlik eder, ödünç alma ve yönlendirme hizmetlerini yürütürler.</li>
+      <li><strong>Destek Personeli:</strong> Teknik altyapı, lojistik ve bakım gibi destek süreçlerinde görev alırlar.</li>
+      <li><strong>İdari ve Mali Personel:</strong> Kütüphane faaliyetlerinin idari ve mali işlemlerinin yürütülmesinden sorumludur.</li>
+    </ul>
+  </div>
+
+  <footer>
+    &copy; 2025 Melike Kütüphanesi - Tüm hakları saklıdır.
+  </footer>
+
+</body>
+</html>

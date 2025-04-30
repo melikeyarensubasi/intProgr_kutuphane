@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Melike Kütüphanesi - Veritabanları</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #003B5C;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #005b88;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+    }
+
+    nav ul li:hover {
+      background-color: #004a70;
+    }
+
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #0077aa;
+      top: 50px;
+      left: 0;
+      min-width: 180px;
+      z-index: 1;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #003B5C;
+      margin-bottom: 20px;
+    }
+
+    .database-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .database-list li {
+      background: #e3eef5;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+
+    .database-list a {
+      text-decoration: none;
+      color: #003B5C;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #003B5C;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Melike Kütüphanesi</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Başkanlık</a>
+        <ul>
+          <li><a href="#">Misyon</a></li>
+          <li><a href="#">Vizyon</a></li>
+          <li><a href="#">Organizasyon</a></li>
+        </ul>
+      </li>
+      <li><a href="#">İdari</a>
+        <ul>
+          <li><a href="#">Personel</a></li>
+          <li><a href="#">İletişim</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Hizmetler</a></li>
+      <li><a href="#">Veritabanları</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Akademik Veritabanları</h2>
+    <p>Melike Üniversitesi öğrencileri ve akademik personeli aşağıdaki veritabanlarına erişim sağlayabilir:</p>
+
+    <ul class="database-list">
+      <li><a href="https://www.jstor.org" target="_blank">JSTOR</a> – Akademik makalelere erişim.</li>
+      <li><a href="https://www.sciencedirect.com" target="_blank">ScienceDirect</a> – Bilimsel yayınlar ve dergiler.</li>
+      <li><a href="https://www.proquest.com" target="_blank">ProQuest</a> – Tezler, raporlar ve gazete arşivleri.</li>
+      <li><a href="https://www.ebrary.com" target="_blank">eBrary</a> – Elektronik kitaplar ve yayınlar.</li>
+      <li><a href="https://www.tubitak.gov.tr" target="_blank">ULAKBİM TR Dizin</a> – Ulusal akademik veri tabanı.</li>
+    </ul>
+  </div>
+
+  <footer>
+    &copy; 2025 Melike Kütüphanesi - Tüm hakları saklıdır.
+  </footer>
+
+</body>
+</html>

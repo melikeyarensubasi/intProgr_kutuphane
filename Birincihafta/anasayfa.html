@@ -1,0 +1,211 @@
+Şunu dedin:
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melike Kütüphane</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #eeeeee;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .menu {
+      position: relative;
+      padding: 14px 20px;
+      cursor: pointer;
+    }
+
+    .menu:hover {
+      background-color: #ddd;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px;
+      color: #333;
+    }
+
+    .dropdown a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .menu:hover .dropdown {
+      display: block;
+    }
+
+    .hero {
+      background: url('kutuphane_image_08.jpg') no-repeat center center;
+      background-size: cover;
+      height: 400px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .search-section {
+      padding: 30px;
+      text-align: center;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #003366;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005599;
+    }
+
+    .content {
+      padding: 40px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    /* Responsive Menu for Mobile */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .menu {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+      }
+
+      .dropdown {
+        position: relative;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Melike Kütüphane ve Dokümantasyon Dairesi</h1>
+</header>
+
+<nav>
+  <div class="menu"><a href="#">Anasayfa</a></div>
+  
+  <div class="menu">
+    <a href="#">Başkanlık</a>
+    <div class="dropdown">
+      <a href="misyon.html">Misyon</a>
+      <a href="vizyon.html">Vizyon</a>
+      <a href="organizasyon.html">Organizasyon</a>
+    </div>
+  </div>
+
+  <div class="menu">
+    <a href="#">İdari</a>
+    <div class="dropdown">
+      <a href="personel.html">Personel</a>
+      <a href="iletişim.html">İletişim</a>
+    </div>
+  </div>
+
+  <div class="menu">
+    <a href="#">Hizmetler</a>
+    <div class="dropdown">
+      <a href="danisma.html">Danışma</a>
+      <a href="rezerve.html">Rezerve</a>
+      <a href="veritabanı.html">Veri Tabanı</a>
+    </div>
+  </div>
+
+  <div class="menu"><a href="yayinlar.html">Yayınlar</a></div>
+  <div class="menu"><a href="iletişim.html">İletişim</a></div>
+</nav>
+<div class="menu">
+
+    <a href="#">Hesabım</a>
+    <div class="dropdown">
+      <a href="üyeol.html">Üye Ol</a>
+      <a href="girisyap.html">Giriş Yap</a>
+      <a href="profil.html">Profil</a>
+    </div>
+  </div>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <img src="https://images.gonulluyuzbiz.gov.tr/public/161064.jpg" alt="Kütüphane Görseli" style="max-width: 100%; height: auto;">
+  </div>
+  
+<div class="search-section">
+  <input type="text" placeholder="Kelime giriniz...">
+  <button>Ara</button>
+</div>
+
+<div class="content">
+  <h2>Yeni Sayı Yayında!</h2>
+  <p>Cilt: 4 | Sayı: 2 — Melike Üniversitesi Yayınları</p>
+</div>
+
+<footer>
+  <p>&copy; 2025 Melike Üniversitesi</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Melike Kütüphanesi - Organizasyon</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eef2f3;
+      color: #333;
+    }
+
+    header {
+      background-color: #003B5C;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #005b88;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      color: #fff;
+      padding: 15px 20px;
+      text-decoration: none;
+    }
+
+    nav ul li:hover {
+      background-color: #004a70;
+    }
+
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background-color: #0077aa;
+      top: 50px;
+      left: 0;
+      min-width: 180px;
+      z-index: 1;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul li {
+      width: 100%;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #003B5C;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #003B5C;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    ul.org-list {
+      list-style-type: '📘 ';
+      padding-left: 20px;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li ul {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Melike Kütüphanesi</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Başkanlık</a>
+        <ul>
+          <li><a href="#">Misyon</a></li>
+          <li><a href="#">Vizyon</a></li>
+          <li><a href="#">Organizasyon</a></li>
+        </ul>
+      </li>
+      <li><a href="#">İdari</a>
+        <ul>
+          <li><a href="#">Personel</a></li>
+          <li><a href="#">Birimler</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Hizmetler</a></li>
+      <li><a href="#">Veritabanları</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Organizasyon Yapısı</h2>
+    <p>
+      <strong>Melike Üniversitesi Kütüphane ve Dokümantasyon Dairesi Başkanlığı</strong>, modern kütüphane hizmetlerini etkin bir şekilde sunabilmek amacıyla kurumsal bir yapı altında organize edilmiştir. Başkanlığımız; hizmet kalitesini artırmak, bilgiye erişimi kolaylaştırmak ve kullanıcı memnuniyetini en üst düzeye çıkarmak için farklı birimlerden oluşan koordineli bir çalışma sistemi yürütmektedir.
+    </p>
+
+    <h3>Organizasyon Şemamızda Yer Alan Temel Birimler:</h3>
+    <ul class="org-list">
+      <li><strong>Kataloglama ve Sınıflama Birimi:</strong> Koleksiyonların düzenli şekilde erişilebilir olmasını sağlar.</li>
+      <li><strong>Elektronik Kaynaklar ve Veritabanları Birimi:</strong> Dijital kaynakların yönetimi, erişimi ve abonelik işlemlerini yürütür.</li>
+      <li><strong>Ödünç Verme ve Danışma Hizmetleri Birimi:</strong> Kullanıcılarla birebir etkileşim içinde çalışan, bilgilendirme ve kaynak erişimi sağlayan birimdir.</li>
+      <li><strong>Satın Alma ve Koleksiyon Geliştirme Birimi:</strong> Kullanıcı ihtiyaçları doğrultusunda yeni kaynakların temin edilmesini sağlar.</li>
+      <li><strong>Arşiv ve Nadir Eserler Birimi:</strong> Tarihî belgeler ve özel koleksiyonların korunmasını ve kullanıcıya sunulmasını sağlar.</li>
+    </ul>
+  </div>
+
+  <footer>
+    &copy; 2025 Melike Kütüphanesi - Tüm hakları saklıdır.
+  </footer>
+
+</body>
+</html>
