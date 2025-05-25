@@ -66,5 +66,5 @@ kutuphane_yonetim_sistemi/
 ## 👨‍💻 Geliştirici
 
 - Ad: melike yaren 
-- github repo linki :
+- github repo linki : https://github.com/melikeyarensubasi/intProgr_kutuphane/tree/8dc74a44c87eb0eaefcbd103beacbdb4bcb8f6ce/kutuphane_yonetim_sistemi
 - Render Yayın Adresi: [https://kutuphane-xyz.onrender.com](#)
