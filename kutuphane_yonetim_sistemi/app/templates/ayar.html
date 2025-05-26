@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="form-container">
+  <h2>⚙️ Sistem Ayarları</h2>
+  <form method="POST" action="{{ url_for('main.ayar') }}" class="ayar-form">
+    <label>Günlük Gecikme Ücreti (₺)</label>
+    <input type="number" step="0.5" name="gunluk_ceza" value="{{ ayar.gunluk_ceza }}" required>
+
+    <label>Sayfa Başına Gün (varsayılan: 2 gün/10 sayfa)</label>
+    <input type="number" step="1" name="sayfa_basina_gun" value="{{ ayar.sayfa_basina_gun }}" required>
+
+    <button type="submit">Kaydet</button>
+  </form>
+</div>
+{% endblock %}

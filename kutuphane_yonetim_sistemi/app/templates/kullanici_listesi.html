@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="section-title">👥 Kullanıcı Listesi</h2>
+
+<table class="kullanici-tablosu">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Ad</th>
+      <th>Soyad</th>
+      <th>İşlemler</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for kullanici in kullanicilar %}
+    <tr>
+      <td>{{ kullanici.id }}</td>
+      <td>{{ kullanici.ad }}</td>
+      <td>{{ kullanici.soyad }}</td>
+      <td>
+        <a href="{{ url_for('main.kullanici_duzenle', id=kullanici.id) }}" class="btn btn-primary btn-sm">Düzenle</a>
+        <form action="{{ url_for('main.kullanici_sil', id=kullanici.id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Kullanıcıyı silmek istediğinizden emin misiniz?');">
+          <button type="submit" class="btn btn-danger btn-sm">Sil</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

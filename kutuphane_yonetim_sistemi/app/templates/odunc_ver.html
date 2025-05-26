@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="section-title">📚 Kitap Ödünç Verme</h2>
+
+<form action="{{ url_for('main.odunc_ver') }}" method="POST">
+  <div class="form-group">
+    <label for="kitap_id">Kitap Seç</label>
+    <select name="kitap_id" required>
+      <option value="">Bir kitap seçin</option>
+      {% for kitap in kitaplar %}
+      <option value="{{ kitap[0] }}">{{ kitap[1] }} - {{ kitap[2] }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="kullanici_id">Kullanıcı Seç</label>
+    <select name="kullanici_id" required>
+      <option value="">Bir kullanıcı seçin</option>
+      {% for kullanici in kullanicilar %}
+      <option value="{{ kullanici[0] }}">{{ kullanici[1] }} {{ kullanici[2] }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="odunc_tarihi">Ödünç Verme Tarihi</label>
+    <input type="date" name="odunc_tarihi" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Ödünç Ver</button>
+</form>
+{% endblock %}

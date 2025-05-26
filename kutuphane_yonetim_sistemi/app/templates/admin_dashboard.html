@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="section-title">📊 Admin Paneli</h2>
+
+<!-- Kitap Ekleme -->
+<section class="admin-blok">
+  <h3>➕ Yeni Kitap Ekle</h3>
+  <form method="POST" action="{{ url_for('main.kitap_ekle') }}" enctype="multipart/form-data" class="kitap-form">
+    <input type="text" name="baslik" placeholder="Kitap Başlığı" required>
+    <input type="text" name="yazar" placeholder="Yazar" required>
+    <input type="date" name="yayin_tarihi" required>
+    <input type="text" name="kategori" placeholder="Kategori" required>
+    <input type="number" name="stok" placeholder="Stok" required>
+    <input type="number" name="sayfa_sayisi" placeholder="Sayfa Sayısı" required>
+    <input type="file" name="kapak_dosyasi" accept="image/*">
+    <button type="submit">Ekle</button>
+  </form>
+</section>
+
+<!-- Kitap Listesi -->
+<section class="admin-blok">
+  <h3>📚 Kayıtlı Kitaplar</h3>
+  <div class="kitap-grid">
+    {% for kitap in kitaplar %}
+    <div class="kitap-kart">
+      <img src="{{ url_for('static', filename='img/kitap_kapaklari/' ~ (kitap.kapak_yolu or 'varsayilan.jpg')) }}" class="kitap-kapak">
+      <h4>{{ kitap.baslik }}</h4>
+      <p>{{ kitap.yazar }}</p>
+      <form method="POST" action="{{ url_for('main.kitap_sil', kitap_id=kitap.id) }}"
+            onsubmit="return confirm('Silmek istediğinizden emin misiniz?');">
+        <button type="submit" class="btn btn-danger btn-sm">Sil</button>
+      </form>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Ödünçler -->
+<section class="admin-blok">
+  <h3>📥 Ödünç Kitaplar</h3>
+  <table class="odunc-tablosu">
+    <tr>
+      <th>Kitap</th>
+      <th>Kullanıcı</th>
+      <th>Tarih</th>
+      <th>Durum</th>
+    </tr>
+    {% for o in oduncler %}
+    <tr>
+      <td>{{ o.baslik }}</td>
+      <td>{{ o.kullanici_ad }}</td>
+      <td>{{ o.odunc_tarihi }}</td>
+      <td>{% if o.teslim_edildi %}✅ Teslim{% else %}❌ Bekleniyor{% endif %}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</section>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="section-title">📊 Raporlar</h2>
+
+<h3>📚 En Çok Ödünç Verilen Kitaplar</h3>
+<table class="rapor-tablosu">
+  <thead>
+    <tr>
+      <th>Kitap ID</th>
+      <th>Ödünç Verilme Sayısı</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for kitap in en_cok_odunc_verilenler %}
+    <tr>
+      <td>{{ kitap[0] }}</td>
+      <td>{{ kitap[1] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="form-container">
+  <h2 class="section-title">👤 Yeni Kullanıcı Ekle</h2>
+  <form method="POST" action="{{ url_for('main.kullanici_ekle') }}" class="form-box">
+    <input type="text" name="ad" placeholder="Ad" required>
+    <input type="text" name="soyad" placeholder="Soyad" required>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+  </form>
+</section>
+{% endblock %}

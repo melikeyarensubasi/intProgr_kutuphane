@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="login-container">
+  <h2>🔐 Admin Girişi</h2>
+  <form method="POST" class="login-form">
+    <input type="text" name="kullanici_adi" placeholder="admin kullanici adi" required>
+    <input type="password" name="sifre" placeholder="1234 sifre" required>
+    <button type="submit">Giriş Yap</button>
+  </form>
+</div>
+{% endblock %}

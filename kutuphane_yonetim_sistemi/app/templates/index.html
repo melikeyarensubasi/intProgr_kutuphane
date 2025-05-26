@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="section-title">📖 Kitap Galerisi</h2>
+<div class="kitap-grid">
+  {% for kitap in kitaplar %}
+  <div class="kitap-kart {% if kitap['stok'] == 0 %}tukendi{% endif %}">
+    <img src="{{ url_for('static', filename='img/kitap_kapaklari/' ~ (kitap.kapak_yolu or 'varsayilan.jpg')) }}"
+         alt="Kapak" class="kitap-kapak">
+    <h3>{{ kitap.baslik }}</h3>
+    <p>{{ kitap.yazar }}</p>
+    <p class="stok-bilgi">
+      {% if kitap['stok'] > 0 %}
+        Stok: {{ kitap.stok }}
+      {% else %}
+        <span class="stok-yok">Tükendi</span>
+      {% endif %}
+    </p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
