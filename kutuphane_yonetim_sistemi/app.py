@@ -15,10 +15,10 @@ app.register_blueprint(main)
 
 init_db()
 
-if __name__ == "__main__":
-    print("🚀 Kütüphane sistemi başlatılıyor...")
-    app.run(debug=False)
-
-#import os
 #if __name__ == "__main__":
-#   app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+ #   print("🚀 Kütüphane sistemi başlatılıyor...")
+  #  app.run(debug=False)
+
+import os
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
